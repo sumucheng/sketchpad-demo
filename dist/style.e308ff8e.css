@@ -9,21 +9,35 @@
 }
 #wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
-  width: 100vw;
-  top: 10px;
+  top: 150px;
+  left: 10px;
+  height: 60vh;
 }
 .lineWidth {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  top: 100px;
+}
+.lw-border.active {
+  border: 1px solid #999;
+  border-radius: 10px;
+  height: 40px;
   display: flex;
   align-items: center;
 }
-.lineWidth div {
+.lw-small,
+.lw-normal,
+.lw-large {
   width: 30px;
   background: black;
-  transform: rotate(45deg);
-  margin: 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .lineWidth .lw-small {
   height: 5px;
@@ -35,23 +49,29 @@
   height: 20px;
 }
 .lineColor {
-  border: 1px solid red;
   display: flex;
-  margin-left: 50px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .lineColor div {
   margin: 5px;
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 .lineColor .lc-black {
   background: black;
 }
 .lineColor .lc-red {
   background: red;
+}
+.lineColor .lc-yellow {
+  background: yellow;
+}
+.lineColor .lc-blue {
+  background: blue;
 }
 .lineColor .lc-green {
   background: green;
@@ -75,6 +95,18 @@
   top: 20px;
   right: 30px;
 }
+.pen {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  z-index: 5;
+}
+.eraser {
+  position: fixed;
+  top: 20px;
+  left: 75px;
+  z-index: 5;
+}
 .icon {
   width: 1em;
   height: 1em;
@@ -83,6 +115,7 @@
   overflow: hidden;
   transform: scale(2);
   color: #888;
+  cursor: pointer;
 }
 
 
